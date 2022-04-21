@@ -23,9 +23,11 @@ There are things i will change, but as it is. The system is fully operational.
 
 Features:
 * Write new data
-* Read[all data/day(s) data/ between timestamps data
-* Max / Min / AvG : temperature [ all data / day(s) data / between timestamps data
-* Save to file, all data / between timestamps / day(s) 
+* Read[all data/day(s) data/ between timestamps data]
+* Max / Min / AvG : temperature [ all data / day(s) data / between timestamps data]
+* Save to file (csv), [all data / between timestamps / day(s)]
 * Count number of loggings 
-* Draw chart of : day(s) / all data / between timestamps data / last data 
+* Draw chart of : [day(s) / all data / between timestamps data / last data]
 * The chart page is auto refreshing each 60 seconds.
+
+keep checking as things are changing !
