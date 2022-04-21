@@ -25,7 +25,7 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-    return '<h1>Temperature data restAPI</1><p><a href="http://xaviercat.com:8094/temperature?key=2022&act=chart&act=chart&day=1"><h4>Take a look</h></a><p><h3> for details, contact &nbsp&nbsp<a href="mailto:guy@xaviercat.com">guy@xaviercat.com</a></p></h3><p>'
+    return '<h1>Temperature data restAPI</1><p><a href="http://example.com:1234/temperature?key=2022&act=chart&act=chart&day=1"><h4>Take a look</h></a><p><h3> for details, contact &nbsp&nbsp<a href="mailto:guy@example.com">guy@example.com</a></p></h3><p>'
 
 
 @app.route('/temperature', methods=['GET'])   # df2 = df["Fee"].mean()
