@@ -12,10 +12,9 @@ import pandas as pd
 from flask import send_file
 from flask import render_template
 
-#apiUrl='http://xaviercat.com:8089/temperature?key=2022&act=&timeStamp=&temp='
-apiKey = '2022'
+apiKey = '**********'
 db_name = "guy_temps"
-port = '8094'
+port = '1234'
 chart_template = 'chart_line.html'
 
 app = flask.Flask(__name__)
