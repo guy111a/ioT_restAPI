@@ -4,7 +4,7 @@ Showing near live data from ioT sensors
 
 
 
-This weekend project came as a word in progress as i was playing around with my new ocylloscop
+This weekend project came as a work in progress, as i was playing around with my new ocylloscop
 Trying to measure wave patterns out of my raspberry pi zero /w.
 
 Those attempts led to connecting a sensor to the sbc and since i already have a sensor i might as well collect some data with it.
