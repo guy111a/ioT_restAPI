@@ -1,0 +1,89 @@
+
+
+<!--
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+
+<canvas id="myPlot11" style="width:100%;max-width:900px"></canvas>
+<script>
+new Chart("myPlot11", {
+  type: 'scatter',
+  data: {
+    datasets: [{
+      pointRadius:2,
+      backgroundColor:"rgba(0,0,255,1)",
+      data: [
+       {% for item in members %}
+       {{ item }} ,
+       {% endfor %}]         
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      xAxes: [{ticks: {min: {{ min_x }}, max:{{ max_x }} }}],
+      yAxes: [{ticks: {min: {{ min_y }}, max:{{ max_y }} }}],
+    }
+  }
+});
+</script>   -->
+
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<head>
+  <meta http-equiv="refresh" content="60">
+</head>
+
+<body>
+
+<h2><font color='green'>Showing the Temperature information:</font><p><h3>
+Max Hot:&nbsp {{ max_y }} &nbspc<br>
+Min cold:&nbsp {{ min_y }} &nbspc<br>
+AVG relative Humid:&nbsp {{ currentH }} <br>
+Last Temp:&nbsp {{ currentT }} &nbsp&nbsp/ {{ currentTime }} <br>
+Start Time:&nbsp {{ sTime }} <br>
+End Time:&nbsp {{ eTime }} <br><p></h3>
+
+
+<canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+
+<script>
+var xValues =
+ [
+       {% for item in members %}
+       {{ item }} ,
+       {% endfor %}
+       ]         ;
+    
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data:  [
+       {% for item in temp_values %}
+       {{ item }} ,
+       {% endfor %}
+       ],
+      borderColor: "red",
+      label: "Temperature", 
+      fill: true
+    }, { 
+      data: [
+       {% for item in humid_values %}
+       {{ item }} ,
+       {% endfor %}
+       ]  ,
+      borderColor: "green",
+      label: "Humidity", 
+      fill: true
+    }]
+  },
+  options: {
+    legend: {display: true} 
+  }
+});
+</script>
