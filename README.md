@@ -31,3 +31,11 @@ Features:
 * The chart page is auto refreshing each 60 seconds.
 
 keep checking as things are changing !
+
+
+2-May-2022
+New Addition, RPI zero /w,  equipped with LCD (16x2) as an independent ‘client’ for reading the information of last reading.
+Showing the current time, Temp, Humidity and the Light (0-99%)
+Auto refreshing once per 60 sec.
+
+In order to add some complexity, the ‘client’ is reading the information from a MongoDB container holding the last reading only, timed script is running each minute and selecting the last row from MariaDB and storing this record set into MongoDB.
