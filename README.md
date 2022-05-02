@@ -3,7 +3,7 @@
 Showing near live data from ioT sensors
 
 
-
+22-April-2022
 This weekend project came as a work in progress, as i was playing around with my new ocylloscop
 Trying to measure wave patterns out of my raspberry pi zero /w.
 
